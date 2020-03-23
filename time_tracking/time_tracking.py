@@ -74,8 +74,8 @@ def week():
         if path.exists(path.join(folder_path, str(current_date))):
             with open(path.join(folder_path, str(current_date)), "r") as fp:
                 day_dt = timedelta(seconds=float(fp.read()))
-                print("\033[35m{}\033[33m: \033[34m{}".format(current_date, day_dt))
-                total_time += day_dt
+            print("\033[35m{}\033[33m: \033[34m{}".format(current_date, day_dt))
+            total_time += day_dt
     print("\033[35mTotal time\033[33m: \033[34m{}".format(total_time))
         
         
