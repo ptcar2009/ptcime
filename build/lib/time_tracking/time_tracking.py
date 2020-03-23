@@ -105,3 +105,9 @@ def day():
             currently_worked: timedelta = datetime.now() - current_dt
     print(
         "\033[33mDaily worked time: \033[34m{}\033[33m.".format(day_dt + currently_worked))
+
+def toggle():
+    if path.exists(path.join(folder_path, "current_time")):
+        stop()
+    else:
+        start()

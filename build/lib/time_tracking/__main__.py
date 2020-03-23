@@ -1,5 +1,5 @@
 from .parsing import main_parser
-from .time_tracking import start, stop, week, day, current
+from .time_tracking import start, stop, week, day, current, toggle
 
 if __name__ == "__main__":
     arguments = main_parser.parse_args()
@@ -13,3 +13,5 @@ if __name__ == "__main__":
         day()
     if arguments.action == "week":
         week()
+    if arguments.action == "toggle":
+        toggle()
