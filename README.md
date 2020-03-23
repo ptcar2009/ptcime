@@ -31,9 +31,5 @@ ptcime day
 ```
 Log week work time:
 ```bash
-<<<<<<< HEAD
 ptcime week
-=======
-ptcime day
->>>>>>> 9662f40c453c0a018463c3d9b356014ed13d9394
 ```
