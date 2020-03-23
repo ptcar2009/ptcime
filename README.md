@@ -5,20 +5,31 @@ Small time tracker built on python.
 
 ```bash
 git clone https://github.com/ptcar2009/ptcime.git
-pip3 install . --user
+cd ptcime && pip3 install . --user
 ```
 
 ## Usage
 
 
 Start tracking time:
-    ptcime start
-
+```bash
+ptcime start
+```
 Stop tracking time and log currently worked on:
-    ptcime stop
-
-Log day work time:
-    ptcime day
+```bash    
+ptcime stop
+```
 
 Log currently worked time:
-    ptcime current
+```bash
+ptcime current
+```
+
+Log day work time:
+```bash
+ptcime day
+```
+Log week work time:
+```bash
+ptcime day
+```
