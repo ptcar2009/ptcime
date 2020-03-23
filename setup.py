@@ -7,6 +7,5 @@ setuptools.setup(
     description='Little time tracking tool',
     packages=['time_tracking'],
     install_requires=[
-    ],
-    python_requires='>=3.7'
+    ]
 )
