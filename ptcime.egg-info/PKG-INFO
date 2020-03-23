@@ -1,7 +1,7 @@
 Metadata-Version: 2.1
 Name: ptcime
-Version: 1.0.2
-Summary: A small example package
+Version: 1.0.3
+Summary: A simple time tracking script.
 Home-page: https://github.com/ptcar2009/ptcime
 Author: Pedro Tavares de Carvalho
 Author-email: ptcar2009@gmail.com

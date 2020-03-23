@@ -27,6 +27,7 @@ def start():
         fp.write(int_to_bytes(int(datetime.now().timestamp())))
         print("\033[33mStarted tracking time!")
 
+
 def current():
     if path.exists(path.join(folder_path, "current_time")):
         with open(path.join(folder_path, "current_time"), "rb") as fp:
@@ -39,6 +40,7 @@ def current():
     else:
         print("\033[33mNo time keep started. Run \033[35mptcime start\033[33m.")
         exit(0)
+
 
 def stop():
     if path.exists(path.join(folder_path, "current_time")):
@@ -74,11 +76,18 @@ def week():
         if path.exists(path.join(folder_path, str(current_date))):
             with open(path.join(folder_path, str(current_date)), "r") as fp:
                 day_dt = timedelta(seconds=float(fp.read()))
-            print("\033[35m{}\033[33m: \033[34m{}".format(current_date, day_dt))
+            print("\033[35m{}\033[33m: \033[34m{}".format(
+                current_date, day_dt))
             total_time += day_dt
-    print("\033[35mTotal time\033[33m: \033[34m{}".format(total_time))
-        
-        
+    currently_worked = timedelta()
+    if path.exists(path.join(folder_path, "current_time")):
+        with open(path.join(folder_path, "current_time"), "rb") as fp:
+            ts = int_from_bytes(fp.read())
+            current_dt = datetime.fromtimestamp(float(ts))
+
+            currently_worked: timedelta = datetime.now() - current_dt
+    print("\033[35mTotal time\033[33m: \033[34m{}".format(
+        total_time + currently_worked))
 
 
 def day():
@@ -87,6 +96,12 @@ def day():
             day_dt = timedelta(seconds=float(fp.read()))
     else:
         day_dt = timedelta()
+    currently_worked = timedelta()
+    if path.exists(path.join(folder_path, "current_time")):
+        with open(path.join(folder_path, "current_time"), "rb") as fp:
+            ts = int_from_bytes(fp.read())
+            current_dt = datetime.fromtimestamp(float(ts))
 
+            currently_worked: timedelta = datetime.now() - current_dt
     print(
-        "\033[33mDaily worked time: \033[34m{}\033[33m.".format(day_dt))
+        "\033[33mDaily worked time: \033[34m{}\033[33m.".format(day_dt + currently_worked))

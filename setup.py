@@ -5,10 +5,10 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="ptcime", # Replace with your own username
-    version="1.0.2",
+    version="1.0.3",
     author="Pedro Tavares de Carvalho",
     author_email="ptcar2009@gmail.com",
-    description="A small example package",
+    description="A simple time tracking script.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/ptcar2009/ptcime",
