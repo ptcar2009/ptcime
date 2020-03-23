@@ -1,10 +1,10 @@
-Metadata-Version: 1.2
+Metadata-Version: 1.0
 Name: ptcime
 Version: 1.0
 Summary: Little time tracking tool
 Home-page: UNKNOWN
 Author: Me
+Author-email: UNKNOWN
 License: UNKNOWN
 Description: UNKNOWN
 Platform: UNKNOWN
-Requires-Python: >=3.7
