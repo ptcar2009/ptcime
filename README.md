@@ -4,8 +4,7 @@ Small time tracker built on python.
 ## Installation
 
 ```bash
-git clone https://github.com/ptcar2009/ptcime.git
-cd ptcime && pip3 install . --user
+pip install ptcime
 ```
 
 ## Usage
